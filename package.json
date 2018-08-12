@@ -1,0 +1,44 @@
+{
+  "name": "node_red",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./config/ && nodemon -w . --exec \"babel-node ./app.js --presets es2015,stage-0\"",
+    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./config/ && mocha --timeout 10000 --compilers js:babel-core/register ./test/*.js ",
+"populatedb": "babel-node --presets es2015 ./node_modules/pow-mongodb-fixtures/bin/mongofixtures node-express-skeleton-dev ./test/fixtures"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ILikePythonAndDjango/node_red.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ILikePythonAndDjango/node_red/issues"
+  },
+  "homepage": "https://github.com/ILikePythonAndDjango/node_red#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "config": "^1.26.2",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.2",
+    "mongoose": "^4.11.5",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.8.2",
+    "pow-mongodb-fixtures": "^0.14.0"
+  }
+}
