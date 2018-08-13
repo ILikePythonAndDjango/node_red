@@ -1,4 +1,4 @@
-npm install --save dy-parser@1.17.2
+npm install --save body-parser@1.17.2
 npm install --save config@1.26.2
 npm install --save express@4.15.3
 npm install --save jsonwebtoken@7.4.2
