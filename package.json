@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./config/ && nodemon -w . --exec \"babel-node ./app.js --presets es2015,stage-0\"",
-    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./config/ && mocha --timeout 10000 --compilers js:babel-core/register ./test/*.js ",
-"populatedb": "babel-node --presets es2015 ./node_modules/pow-mongodb-fixtures/bin/mongofixtures node-express-skeleton-dev ./test/fixtures"
+    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./src/config/ && nodemon -w src --exec \"babel-node src/app.js --presets es2015,stage-0\"",
+    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./src/config/ && mocha --timeout 10000 --compilers js:babel-core/register ./src/test/*.js ",
+    "populatedb": "babel-node --presets es2015 ./node_modules/pow-mongodb-fixtures/bin/mongofixtures node-express-skeleton-dev ./src/test/fixtures"
   },
   "repository": {
     "type": "git",
