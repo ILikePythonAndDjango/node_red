@@ -1,19 +1,19 @@
 {
   "name": "node_red",
   "version": "1.0.0",
-  "description": "https://docs.google.com/document/d/1nIwGFE8_oylxT4ii6sLgSin2zNCm23U6CJBLC9j5mZ8/edit#",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./src/config/ && mocha --timeout 10000 --compilers js:babel-core/register ./src/test/*.js "
+    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./src/config/ && nodemon -w src --exec \"babel-node src/app.js --presets es2015,stage-0\"",
+    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./src/config/ && mocha --timeout 10000 --compilers js:babel-core/register ./src/test/*.js ",
+    "populatedb": "babel-node --presets es2015 ./node_modules/pow-mongodb-fixtures/bin/mongofixtures node-express-skeleton-dev ./src/test/fixtures"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ILikePythonAndDjango/node_red.git"
   },
-  "keywords": [
-    "REST"
-  ],
-  "author": "Osipov Nikita",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ILikePythonAndDjango/node_red/issues"
@@ -31,6 +31,8 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.17.2",
     "config": "^1.26.2",
     "express": "^4.15.3",
     "jsonwebtoken": "^7.4.2",
