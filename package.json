@@ -33,12 +33,16 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "config": "^1.26.2",
     "express": "^4.15.3",
     "jsonwebtoken": "^7.4.2",
+    "lodash": "^4.17.10",
     "mongoose": "^4.11.5",
     "mongoose-paginate": "^5.0.3",
     "morgan": "^1.8.2",
-    "pow-mongodb-fixtures": "^0.14.0"
+    "mqtt": "^2.18.3",
+    "pow-mongodb-fixtures": "^0.14.0",
+    "yandex-dialogs-sdk": "^1.5.2"
   }
 }
