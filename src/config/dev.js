@@ -5,7 +5,7 @@ module.exports = {
     port: 9000
   },
   database: {
-    url: `mongodb://${host}/node_red`,
+    url: `mongodb://${host}/node-express-skeleton-dev`,
     properties: {
       useMongoClient: true
     }
