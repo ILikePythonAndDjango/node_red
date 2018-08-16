@@ -18,10 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
-app.post('/webhookurl', async (req, res) => {
-  const jsonAnswer = await alice.handleRequest(req.body);
-  res.json(jsonAnswer);
-});
+app.post('/webhookurl', alice);
 app.use('/', routes);
 
 const port = process.env.PORT || config.server.port;
